@@ -1,0 +1,32 @@
+body {
+    background-color: whitesmoke;
+    margin: 0px;
+}
+
+
+div.header {
+    background-color: gainsboro;
+    height: 10%;
+    width: 100%;
+    margin-top: 0px;
+    justify-items: center;
+}
+h1, h2 {
+    width: 40%;
+    margin-top: 0px;
+    display: inline;
+    padding: 8px;
+}
+h1 {
+    justify-self: left;
+}
+h2 {
+    justify-self: right;
+}
+.countdown-inaktiv {
+    color: rgb(67, 102, 15);
+}
+.countdown-aktiv {
+    color: red;
+    text-decoration: wavy;
+}
