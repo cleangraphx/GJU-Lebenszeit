@@ -1,3 +1,10 @@
+window.onload = function() {
+  pageSetup();
+}
+
+
+
+
 const ROT = { h: 1, m: 0, s: 0 };
 
 async function getJSONData() {
