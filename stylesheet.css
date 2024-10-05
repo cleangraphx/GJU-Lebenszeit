@@ -110,7 +110,7 @@ div.left-align {
   justify-content: space-around;
   width: 100%;
   flex-wrap: wrap;
-  animation: loop 10s linear infinite;
+  animation: loop 15s linear infinite;
 
   text-align: center;
   padding: 0;
@@ -122,7 +122,7 @@ div.left-align {
     transform: translateY(5%);
   }
   95% {
-    transform: translateY(-40%);
+    transform: translateY(calc(-100% + 400px));
   }
   100% {
     transform: translateY(5%);
