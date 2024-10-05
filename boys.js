@@ -2,7 +2,7 @@ const ROT = {h:1, m:0, s:0};
 
 
 async function getJSONData() {
-	const url = "http://localhost:80/GJU/boys.json";
+	const url = "boys.json";
 	try {
 		const response = await fetch(url);
 		if (!response.ok) {

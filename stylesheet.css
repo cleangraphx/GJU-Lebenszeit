@@ -99,3 +99,8 @@ div.left-align {
 .tot {
 	text-decoration: line-through;
 }
+#boys-list {
+	display: flex;
+	flex-direction: column;
+	overflow: auto;
+}
