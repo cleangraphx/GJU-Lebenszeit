@@ -30,3 +30,72 @@ h2 {
     color: red;
     text-decoration: wavy;
 }
+
+div.main {
+	margin-left: 50px;
+	margin-right: 50px;
+	margin-top: 25px;
+	margin-bottom: 25px;
+}
+
+ul.boys {
+	max-width: 1500px;
+	margin: auto;
+	display: block;
+	overflow: hidden;
+	text-align: center;
+	background-color: RGB(214,214,214);
+}
+/*five list items should fit within the .boys ul*/
+li.boys {
+	list-style: none;
+	float: left;
+	width: 200px;
+	/*height: 400px;*/
+	padding: 20px 30px 20px 30px;
+	margin: 20px;
+
+	background-color: RGB(255,255,255);
+
+	border-width: 2px;
+	border-color: RGB(50,50,50);
+	border-style: ridge;
+	border-radius: 8px;
+}
+.boys {
+	font-family: "Nunito Sans", sans-serif;
+	font-size: 16px;
+	font-weight: 400;
+}
+p.boys {
+	color: RGB(32, 32, 32);
+	margin-top: 0px;
+	margin-bottom: 0px;
+}
+.nn {
+	font-size: 24px;
+	font-weight: 600;
+}
+.vn {
+	font-size: 20px;
+}
+br.boys {
+	height: 32px;
+}
+img.boys {
+	width: 200px;
+	height: 200px;
+	background-color: red;
+}
+div.left-align {
+	text-align: left;
+}
+.timer {
+	font-style: italic;
+}
+.rot {
+	color: red;
+}
+.tot {
+	text-decoration: line-through;
+}

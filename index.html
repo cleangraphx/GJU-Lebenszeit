@@ -2,20 +2,28 @@
 <html>
     <head>
         <title>Eure Lebenszeit</title>
-        <link rel="stylesheet" href="stylesheet.css">
 
+        <link rel="stylesheet" href="stylesheet.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+	    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap" rel="stylesheet">
+        
         <meta name="author" content="Jonathan Hörstrup">
         <meta name="description" content="Verbleibende Lebenszeit der Teilnehmer">
         <meta http-equiv="refresh" content="300">
+
+	    <script type="text/javascript" src="boys.js"></script>
     </head>
 
     <body>
         <div class="header">
             <h1>Verbleibende Lebenszeit</h1>
-            <h2>Countdown: <span id="ctd-aktiv" class="countdown-inaktiv">gestoppt</span></h2>
+            <h2>Eure Zeit läuft!</h2>
         </div>
-        <div class="main">
-
+        <div class="main" onload="pageSetup">
+		<ul id="boys-list" class="boys">
+			<!-- Hier werden per JS Die <li> eingefügt-->
+		</ul>
         </div>
     </body>
 
