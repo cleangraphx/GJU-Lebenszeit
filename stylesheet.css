@@ -1,8 +1,18 @@
-body {
-    background-color: whitesmoke;
-    margin: 0px;
+html {
+	height: 100vh;
 }
 
+body {
+    background-color: whitesmoke;
+    margin: 0;
+	padding: 0;
+	height: 100%;
+}
+
+div.spacer5p {
+	height: 5%;
+	width: 100%;
+}
 
 div.header {
     background-color: gainsboro;
@@ -34,8 +44,10 @@ h2 {
 div.main {
 	margin-left: 50px;
 	margin-right: 50px;
-	margin-top: 25px;
-	margin-bottom: 25px;
+	margin-top: 45px;
+	margin-bottom: 45px;
+
+	height: 80%;
 }
 /*
 ul.boys {
@@ -111,7 +123,8 @@ div.left-align {
 	text-align: center;
 	background-color: RGB(214,214,214);
 
-	margin: auto;
+	padding: 0;
+	margin: 0 auto;
 }
 
 @keyframes loop {
@@ -121,6 +134,7 @@ div.left-align {
 
 #list-wrapper {
 	overflow: hidden;
-	width: 80%;
-	height: 80%;
+	width: 100%;
+	max-height: 100%;
+	display: block;
 }
