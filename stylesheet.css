@@ -37,7 +37,7 @@ div.main {
 	margin-top: 25px;
 	margin-bottom: 25px;
 }
-
+/*
 ul.boys {
 	max-width: 1500px;
 	margin: auto;
@@ -46,6 +46,7 @@ ul.boys {
 	text-align: center;
 	background-color: RGB(214,214,214);
 }
+	*/
 /*five list items should fit within the .boys ul*/
 li.boys {
 	list-style: none;
@@ -101,6 +102,20 @@ div.left-align {
 }
 #boys-list {
 	display: flex;
-	flex-direction: column;
-	overflow: auto;
+	align-items: center;
+	justify-content: space-around;
+	width: fit-content;
+	white-space: nowrap;
+	animation: loop 30s linear infinite;
+	
+	text-align: center;
+	background-color: RGB(214,214,214);
+
+	max-width: 1500px;
+	margin: auto;
+}
+
+@keyframes loop {
+	0% {transform: translateX(0%);}
+	100% {transform: translateX(-50%);}
 }
