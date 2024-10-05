@@ -104,18 +104,23 @@ div.left-align {
 	display: flex;
 	align-items: center;
 	justify-content: space-around;
-	width: fit-content;
-	white-space: nowrap;
-	animation: loop 30s linear infinite;
+	width: 100%;
+	flex-wrap: wrap;
+	animation: loop 10s linear infinite;
 	
 	text-align: center;
 	background-color: RGB(214,214,214);
 
-	max-width: 1500px;
 	margin: auto;
 }
 
 @keyframes loop {
-	0% {transform: translateX(0%);}
-	100% {transform: translateX(-50%);}
+	0% {transform: translateY(0%);}
+	100% {transform: translateY(-50%);}
+}
+
+#list-wrapper {
+	overflow: hidden;
+	width: 80%;
+	height: 80%;
 }
