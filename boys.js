@@ -118,7 +118,7 @@ async function update() {
     document.getElementById(i + "-m").innerHTML = remain.minutes;
     document.getElementById(i + "-s").innerHTML = remain.seconds;
 
-    checkerRotTod(remain, "counter" + i);
+    checkerRotTod(remain, i);
   }
 }
 
@@ -157,11 +157,11 @@ function checkerRotTod(input, elementId) {
     (input.hours <= ROT.h && input.minutes < ROT.m) ||
     (input.hours <= ROT.h && input.minutes <= ROT.m && input.seconds < ROT.s)
   ) {
-    document.getElementById(elementId).setAttribute("class", "boys timer rot");
+    document.getElementById("counter" + elementId).setAttribute("class", "boys timer rot");
   }
   if (input.hours == 0 && input.minutes == 0 && input.seconds == 0) {
     document
-      .getElementById(elementId)
-      .setAttribute("class", "boys timer rot tot");
+      .getElementById("boys-listitem" + elementId)
+      .setAttribute("class", "boys tot");
   }
 }

@@ -46,7 +46,7 @@ div.main {
   margin-left: 50px;
   margin-right: 50px;
 
-  height: 80%;
+  height: 90%;
 
   background-color: RGB(214, 214, 214);
 }
@@ -78,11 +78,11 @@ p.boys {
   margin-bottom: 0px;
 }
 .nn {
-  font-size: 24px;
+  font-size: 24pt;
   font-weight: 600;
 }
 .vn {
-  font-size: 20px;
+  font-size: 20pt;
 }
 br.boys {
   height: 32px;
@@ -97,12 +97,13 @@ div.left-align {
 }
 .timer {
   font-style: italic;
+  font-size: 32pt;
 }
 .rot {
   color: red;
 }
 .tot {
-  text-decoration: line-through;
+  background-color: gray;
 }
 #boys-list {
   display: flex;
