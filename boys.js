@@ -1,9 +1,6 @@
-window.onload = function() {
+window.onload = function () {
   pageSetup();
-}
-
-
-
+};
 
 const ROT = { h: 1, m: 0, s: 0 };
 
@@ -25,26 +22,28 @@ async function getJSONData() {
 async function pageSetup() {
   const promise_json = getJSONData();
   const json = await promise_json.then();
-  const num = json.num;
+  const num = json.boys.length;
 
   for (let i = 0; i < num; i++) {
     console.log("adding cycle: " + i);
 
     let listitem = document.createElement("li");
-    listitem.setAttribute("class", "boys");
+    listitem.classList.add("boys");
+    listitem.classList.add(json.boys[i].team);
     listitem.setAttribute("id", "boys-listitem" + i);
 
-    let vorname = document.createElement("P");
+    let vorname = document.createElement("p");
+    vorname.classList.add("vn");
     vorname.innerHTML = json.boys[i].vorname;
     listitem.appendChild(vorname);
 
     let nachname = document.createElement("p");
+    vorname.classList.add("nn");
     nachname.innerHTML = json.boys[i].nachname;
     listitem.appendChild(nachname);
 
     // Hier soll mal nen image hin
     let img = document.createElement("img");
-    img.setAttribute("class", "boys");
     img.setAttribute("src", json.boys[i].imgpath);
     listitem.appendChild(img);
 
@@ -58,12 +57,12 @@ async function pageSetup() {
     counter.innerHTML =
       '<span id="' +
       i +
-      '-h">xx</span>h <span id="' +
+      '-h">xx</span>:<span id="' +
       i +
-      '-m">xx</span>m <span id="' +
+      '-m">xx</span>:<span id="' +
       i +
       '-s">xx</span>s';
-    counter.setAttribute("class", "boys timer");
+    counter.classList.add("timer");
     counter.setAttribute("id", "counter" + i);
     listitem.appendChild(counter);
 
@@ -110,7 +109,7 @@ function getRemainingTime(timestamp) {
 async function update() {
   const jsonnpromise = getJSONData();
   const jsonn = await jsonnpromise.then();
-  const num = jsonn.num;
+  const num = jsonn.boys.length;
   for (let i = 0; i < num; i++) {
     const remain = getRemainingTime(jsonn.boys[i].expire);
 
@@ -128,7 +127,7 @@ async function sortElements() {
   json_promise = getJSONData();
   json = await json_promise.then();
 
-  for (let i = 0; i < json.num; i++) {
+  for (let i = 0; i < json.boys.length; i++) {
     listElement = { id: "", date: new Date(json.boys[i].expire) };
     listElement.id = "boys-listitem" + i;
     listElements[i] = listElement;
@@ -157,11 +156,9 @@ function checkerRotTod(input, elementId) {
     (input.hours <= ROT.h && input.minutes < ROT.m) ||
     (input.hours <= ROT.h && input.minutes <= ROT.m && input.seconds < ROT.s)
   ) {
-    document.getElementById("counter" + elementId).setAttribute("class", "boys timer rot");
+    document.getElementById("counter" + elementId).classList.add("rot");
   }
   if (input.hours == 0 && input.minutes == 0 && input.seconds == 0) {
-    document
-      .getElementById("boys-listitem" + elementId)
-      .setAttribute("class", "boys tot");
+    document.getElementById("boys-listitem" + elementId).classList.add("tot");
   }
 }
