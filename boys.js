@@ -25,7 +25,6 @@ async function pageSetup() {
   const num = json.boys.length;
 
   for (let i = 0; i < num; i++) {
-    console.log("adding cycle: " + i);
 
     let listitem = document.createElement("li");
     listitem.classList.add("boys");
@@ -138,7 +137,7 @@ async function sortElements() {
   listElements = listElements.sort(compareListElement);
   const parentElement = document.getElementById("boys-list");
 
-  for (let i = 0; i < json.num; i++) {
+  for (let i = 0; i < json.boys.length; i++) {
     let htmlElement = document.getElementById(listElements[i].id);
     parentElement.append(htmlElement);
   }

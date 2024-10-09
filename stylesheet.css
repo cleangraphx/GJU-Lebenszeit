@@ -131,6 +131,17 @@ img.boys {
   font-family: DS-Digital, Arial, Helvetica, sans-serif;
   margin-bottom: 16px;
 }
-.rot {
-  color: red;
+p.rot {
+  animation: rotwarn 1s infinite;
+}
+@keyframes rotwarn {
+  0% {
+    color: black;
+  }
+  50% {
+    color: red;
+  }
+  100% {
+    color: black;
+  }
 }
