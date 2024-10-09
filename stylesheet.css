@@ -122,9 +122,8 @@ br.boys {
 }
 
 img.boys {
-  width: 200px;
+  max-width: 200px;
   height: 200px;
-  background-color: red;
 }
 
 .timer {
