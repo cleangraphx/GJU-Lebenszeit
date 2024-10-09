@@ -44,6 +44,7 @@ async function pageSetup() {
     // Hier soll mal nen image hin
     let img = document.createElement("img");
     img.setAttribute("src", json.boys[i].imgpath);
+    img.classList.add("boys");
     listitem.appendChild(img);
 
     listitem.appendChild(document.createElement("br"));
