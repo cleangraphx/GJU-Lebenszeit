@@ -46,7 +46,7 @@ div.main {
   justify-content: space-around;
   width: 100%;
   flex-wrap: wrap;
-  animation: loop 15s linear infinite;
+  animation: loop 60s linear infinite;
 
   text-align: center;
   padding: 0;
@@ -127,8 +127,9 @@ img.boys {
 }
 
 .timer {
-  font-size: 32pt;
+  font-size: 42pt;
   font-family: DS-Digital, Arial, Helvetica, sans-serif;
+  margin-bottom: 16px;
 }
 .rot {
   color: red;

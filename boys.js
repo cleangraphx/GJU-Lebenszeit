@@ -38,7 +38,7 @@ async function pageSetup() {
     listitem.appendChild(vorname);
 
     let nachname = document.createElement("p");
-    vorname.classList.add("nn");
+    nachname.classList.add("nn");
     nachname.innerHTML = json.boys[i].nachname;
     listitem.appendChild(nachname);
 
@@ -51,6 +51,7 @@ async function pageSetup() {
 
     let verZeit = document.createElement("p");
     verZeit.innerHTML = "Verbleibende Zeit:";
+    verZeit.classList.add("boys");
     listitem.appendChild(verZeit);
 
     let counter = document.createElement("p");
@@ -61,7 +62,9 @@ async function pageSetup() {
       i +
       '-m">xx</span>:<span id="' +
       i +
-      '-s">xx</span>s';
+      '-s">xx</span>';
+      
+    counter.classList.add("boys");
     counter.classList.add("timer");
     counter.setAttribute("id", "counter" + i);
     listitem.appendChild(counter);
